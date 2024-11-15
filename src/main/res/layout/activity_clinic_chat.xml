@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".clinic_chat">
+
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cardView"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:layout_marginHorizontal="15dp"
+      android:layout_marginTop="27dp"
+      android:elevation="20dp"
+      app:cardBackgroundColor="#5292F1"
+      app:cardCornerRadius="25dp"
+      app:cardPreventCornerOverlap="true"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/chat_sender_pic"
+          android:layout_width="45dp"
+          android:layout_height="45dp"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="57dp"
+          android:layout_marginBottom="10dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/msg_sender_icon"
+          app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+      <TextView
+          android:id="@+id/chat_sender_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentStart="true"
+          android:layout_alignParentBottom="true"
+          android:layout_marginStart="111dp"
+          android:layout_marginEnd="15dp"
+          android:layout_marginBottom="19dp"
+          android:textColor="#FFFFFF"
+          android:textSize="16sp" />
+    </RelativeLayout>
+  </androidx.cardview.widget.CardView>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="50dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:background="@drawable/rounded_corner_blue_dark"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="60dp"
+        android:paddingHorizontal="10dp">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/msgadapter"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="45.50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="15dp"
+        app:cardCornerRadius="15dp">
+
+      <EditText
+          android:id="@+id/message_input"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="@null"
+          android:hint="Enter Your Message..."
+          android:paddingStart="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/message_send"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/empty_background"
+        android:scaleType="fitCenter"
+        android:src="@drawable/send_icon_blue" />
+  </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

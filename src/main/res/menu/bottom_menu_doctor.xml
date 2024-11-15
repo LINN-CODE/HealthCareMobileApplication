@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_appointments_doctor"
+        android:icon="@drawable/home_user"
+        android:title="Doctors" />
+    <item
+        android:id="@+id/bottom_message_doctor"
+        android:icon="@drawable/message_user"
+        android:title="Message" />
+    <item
+        android:id="@+id/bottom_profile_doctor"
+        android:icon="@drawable/profile_user"
+        android:title="Appointments" />
+</menu>
